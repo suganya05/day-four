@@ -38,35 +38,47 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <nav>
-            <div id="menu" class="dropdown">
-                <a herf="javascript: void(0)" class="buttonX" onclick="closeMenu()">&times;</a>
-                <div class="dropdown-list">
-                    <div class="top">
-                  <img src="logo0.jpg" alt="">
-                  <a href="#">Log In</a>
+            <div class="sidebar">
+                <div class="sidebar-menu">
+                    
+                    <div class="sidebar-list">
+                      <div class="sidebar-top">
+                      <button  class="buttonX" onclick="closeMenu()">&times;</button>
+                      <div class="sidebar-flex">
+                      <img src="logo0.jpg" >
+                      <a href="#">Log In</a>
+                    </div>
+                    <div class="sidebar-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <div class="sidebar-down">
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <input type="text" class="search-inputs" placeholder="       search"> 
+                    </div>
+                    </div>
+                    </div>
+                    <div class="list">
+                    <div class="list-flex">
+                      <a href="#">Find Talent</a>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="list-flex">
+                      <a href="#">Find Work</a>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="list-flex">
+                      <a href="#">Why Upwork</a>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="flex-list">
+                      <a href="#">Enterprise</a>
+                    </div>
+                    </div>
+                    <div class="sidebar-sign">
+                        <button class="sidebar-sign1"><a href="#">Sign Up</a></button>
+                       </div>
+    
+                  </div>
                 </div>
-                <div class="list">
-                <div class="1">
-                  <a href="#">Find Talent</a>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="2">
-                  <a href="#">Find Work</a>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="3">
-                  <a href="#">Why Upwork</a>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="4">
-                  <a href="#">Enterprise</a>
-                </div>
-                </div>
-                <div class="sign2">
-                    <button class="sign2"><a href="#">Sign Up</a></button>
-                   </div>
-
-              </div>
             </div>
              <div class="navbar">
                
@@ -74,7 +86,6 @@
              <div class="nav-left">
                 
                 <span class="hamburger" onclick="openMenu()">&#9776;</span>
-                <script src="kowshik.js"></script>
 
                 <img src="logo0.jpg" alt="my logo">
                 <div class="dropdown1">
@@ -490,6 +501,7 @@
      </div>
 
      </div>
+     <script src="kowshik.js"></script>
         
     
 </body>
