@@ -21,9 +21,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
+    list-style: none;
     text-decoration: none;
-    transition: .2s linear;
 }
 
 body{
@@ -84,8 +83,8 @@ html::-webkit-scrollbar-thumb{
     background: rgb(255, 255, 255);
     display: flex;
     align-items: center;
-    justify-content: left;
-    padding: 1.5rem 6rem;
+    justify-content: space-between;
+    padding: 1rem 6rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -192,6 +191,7 @@ html::-webkit-scrollbar-thumb{
 .title .text h1{
     font-family: 'Alice', serif;
     font-size: 6.5rem;
+    /* font-size: 80px; */
     font-weight: 600;
     color: var(--light);
 }
@@ -744,25 +744,62 @@ html::-webkit-scrollbar-thumb{
 
 
 
-@media  screen and (max-width: 1020px){
+@media  screen and (max-width: 1200px){
     .btns{
         display: none;
     }
+    /* .header{
+        padding: 1.5rem 2rem;
+    }
+     */
+    .header .navbar a{
+        display: inline;
+        font-size: 10px;
+        /* margin: 0 5px 0 10px ; */
+    }
+    
+    .header .navbar a:hover{
+        color: var(--light);
+    }
+    
     .header .search1{
-       margin: auto;
-    } 
+        margin-left: 40px;
+        padding: 10px 15px;
+    }
     .header p{
-        color: #fff;
-        padding-left: 10px;
+        margin: 0 20px 0 10px;
     }
     .footer .foot .icon .grid1{
         display: grid;
         grid-template-columns: 1fr 3fr;
         padding-left: 0px;
     }
+}
+   
+@media screen and (max-width:968px){
+    .header{
+        padding: 1.5rem 1rem;
+    }
+    
+    .header .navbar a{
+        margin: 0px ;
+        justify-content: space-between;
+    }
+    
+    .header .navbar a:hover{
+        color: var(--light);
+    }
+    
+    .header .search1{
+        margin-left: 0px;
+        padding: 10px 5px;
+    }
+    .header p{
+        margin: 0 15px 0 15px;
+    }
+}
 
-
-@media screen and (max-width:768px) {
+@media screen and (max-width:868px) {
     .title{
         padding: 0 20px;
     }
@@ -844,8 +881,7 @@ html::-webkit-scrollbar-thumb{
         padding: 190px 5px 0 20px;
     }
     .busin .two .image img{
-        width: 33%;
-        transform: translate(141%,-10%);
+        display: none;
     }
     .busin .two .qualityp{
         margin: 0;
@@ -884,7 +920,7 @@ html::-webkit-scrollbar-thumb{
     }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:580px) {
     .header{
         padding: 0;
         margin: 0;
