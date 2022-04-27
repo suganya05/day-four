@@ -29,8 +29,6 @@
 body{
     background: #fff;
     padding-top: 140px;
-    /* overflow-y: scroll;
-    scrollbar-color: green; */
 }
 
 html{
@@ -105,6 +103,11 @@ html::-webkit-scrollbar-thumb{
   .hamburger {
     display: none;
   }
+  .bar,
+  .bar-flex,
+  .bar-search{
+       display: none;
+}
   .navbar img {
     width: 85px;
     max-height: 45px;
@@ -323,10 +326,13 @@ html::-webkit-scrollbar-thumb{
 .freelancer {
     background-image: url(lap.webp);
     width: 100%;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: center;
     border-radius: 10px;
-    padding: 0 10px 30px;
-    margin:10px;
+    padding: 0px 10px 30px;
+    margin:30px 5px;
 }
 
 .freelancer .content h2{
@@ -790,6 +796,24 @@ html::-webkit-scrollbar-thumb{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media  screen and (max-width: 1150px){
     .nav li{
         display: none;
@@ -802,9 +826,115 @@ html::-webkit-scrollbar-thumb{
     }
     .hamburger{
         display: block;
+        cursor: pointer;
         font-size: 30px;
         padding: 0 5px 10px 15px;
     }
+    .bar-flex .buttonX {
+        padding: 25px 0;
+        border: none;
+      display: block;
+      font-size: 40px;
+      color: black;
+      background-color: white;
+    }
+    .bar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: white;
+      z-index: 1000;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+  }
+    .bar-top img{
+        margin-right: 120px;
+      width: 85px;
+      max-height: 45px;
+    }
+    .bar-flex{
+      place-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 5fr;
+   }
+   .bar-flex a{
+      color: #5e6d55;
+      font-size: 2rem;
+      font-weight: 500;
+      padding-left: 320px;
+   }
+   .bar-search{
+      position: relative;
+      height: 50px;
+      place-items: center;
+      border: 0.5px solid gray;
+      border-radius: 45px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 1em;
+      color: #9aaa97;
+      max-width: 95%;
+      margin-top: 30px;
+      margin-left: 15px;
+   }
+   .bar-search i{
+       place-items: center;
+      color: #5e6d55;
+   }
+   .bar-down{
+       padding-bottom: 26px;
+   }
+   .bar-down i{
+      font-size: 12px;
+      margin: 40px 10px 0px;
+  }
+   .search-inputs{
+      width: 500px;
+      height: 40px;
+      position: relative;
+      height: 40px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+  }
+  .drop{
+      line-height: 4;
+      padding: 1em;
+  }
+  .drop a{
+      font-size: 1.5rem;
+      color: black;
+  }
+  
+  .drop-list{
+      display: flex;
+      justify-content: space-between;
+      place-items: center;
+      align-items: center;
+  }
+  .sign{
+      width: 95%;
+     padding: 1em;
+     margin-left: 20px;
+     margin-top: 20px;
+     border-radius: 30px;
+     cursor: pointer;
+     background-color: #14a800;
+  }
+  .bar-signup a{
+      color: white;
+  }
+  .sign:hover{
+    background-color: #387c2f;
+  }
+   .navbar {
+        width: 100%;
+        place-items: center;
+      }
     .footer .foot .icon .grid1{
         display: grid;
         grid-template-columns: 1fr 3fr;
@@ -813,9 +943,6 @@ html::-webkit-scrollbar-thumb{
     .next-head{
         display: none;
     }
-    /* .busin .two .image img{
-        display: none;
-    } */
     .busin .two{
         padding: 60px 40px;
         gap: 0em;
@@ -834,6 +961,9 @@ html::-webkit-scrollbar-thumb{
     .main{
         width: 100%;
     }
+    .bar-flex a{
+        padding-left: 120px;
+     }
     .next-head{
         display: none;
     }
@@ -884,13 +1014,6 @@ html::-webkit-scrollbar-thumb{
     }
     .freelancer .box-container .box{
         padding: 20px 0 20px 20px;
-    }
-    .freelancer {
-        background-image: url(lap.webp);
-        width: 100%;
-       
-        padding: 10px 20px 10px 0px;
-        border-radius: 10px;
     }
     .freelancer .box-container .box p{
         font-size: 1.5rem;
@@ -962,6 +1085,20 @@ html::-webkit-scrollbar-thumb{
 @media screen and (max-width:690px) {
     .main{
         width: 100%;
+    }
+    .bar-down{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    .bar-down i{
+        margin: 40px 0 0px;
+    }
+    .bar-down .search-inputs{
+        margin-top: 25px;
+    }
+    .bar-search{
+        gap: 20px;
     }
     .footer{
         display: none;
@@ -1041,6 +1178,9 @@ html::-webkit-scrollbar-thumb{
     .main{
         width: 100%;
     }
+    .bar-flex a{
+        padding-left: 20px;
+     }
     .title{
         padding: 20px;
     }
@@ -1066,6 +1206,12 @@ html::-webkit-scrollbar-thumb{
         font-size: 5rem;
         line-height: 50px;
         padding: 80px 10px 40px;
+    }
+    .support{
+        margin-left: 60px;
+    }
+    .freelancer{
+        margin-left: 25px;
     }
     .startup .box-container .box{
         margin: 0 20px;
